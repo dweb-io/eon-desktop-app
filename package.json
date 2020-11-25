@@ -1,0 +1,69 @@
+{
+  "name": "eon-desktop-app",
+  "version": "1.0.0",
+  "description": "EON desktop app for watching live tv and video.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "repository": "https://github.com/dnikic/eon-desktop-app",
+  "keywords": [
+    "Electron",
+    "eon",
+    "tv",
+    "desktop",
+    "electron-forge"
+  ],
+  "author": "dnikic",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.54",
+    "@electron-forge/maker-deb": "^6.0.0-beta.54",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.54",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
+    "@electron-forge/maker-zip": "^6.0.0-beta.54",
+    "electron": "^11.0.3"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {
+        "name": "eon-desktop-app",
+        "icon": "assets/img/icon.ico"
+      },
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "eon-desktop-app",
+            "icon": "assets/img/icon.ico"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {
+            "name": "eon-desktop-app",
+            "icon": "assets/img/icon.ico"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {
+            "name": "eon-desktop-app",
+            "icon": "assets/img/icon.ico"
+          }
+        }
+      ]
+    }
+  }
+}
