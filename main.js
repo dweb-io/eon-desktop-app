@@ -26,6 +26,7 @@ function createWindow () {
   mainWindow.loadURL('https://eon.tv/guide/1')  
   mainWindow.setMenu(null); 
   mainWindow.maximize()
+  mainWindow.webContents.setUserAgent("Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:123.0) Gecko/20100101 Firefox/123.0");
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
 }
